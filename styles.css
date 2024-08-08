@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #333333, #1a1a1a);
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+}
+
+header {
+    background: linear-gradient(to bottom, #00ff00, #00cc00);
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 1em;
+    border: 1px solid #555;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+section h2 {
+    background: #00cc00;
+    color: white;
+    margin: 0;
+    padding: 1em;
+    cursor: pointer;
+}
+
+section .content {
+    display: none;
+    padding: 1em;
+    background: #444;
+}
+
+section .content p {
+    margin: 0 0 1em;
+}
+
+section .content button {
+    background: #00cc00;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+section .content button:hover {
+    background: #009900;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.footer a {
+    color: #00cc00;
+    text-decoration: none;
+}
+
+.footer p {
+    margin: 0.5em 0;
+    color: #00cc00;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.instagram-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 1em;
+}

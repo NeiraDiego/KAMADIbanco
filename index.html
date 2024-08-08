@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMADI Información Bancaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Información copiada al portapapeles');
+            }, function(err) {
+                console.error('Error al copiar al portapapeles: ', err);
+            });
+        }
+
+        function toggleSection(element, id) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                history.pushState(null, null, '#');
+            } else {
+                content.style.display = "block";
+                history.pushState(null, null, `#${id}`);
+            }
+        }
+
+        function checkHash() {
+            const hash = location.hash.substring(1);
+            if (hash) {
+                const section = document.getElementById(hash);
+                if (section) {
+                    section.querySelector('h2').click();
+                }
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', checkHash);
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="KAMADI Información Bancaria" class="logo">
+    </header>
+    <main>
+        <section id="carrera">
+            <h2 onclick="toggleSection(this, 'carrera')">KAMADI Carrera</h2>
+            <div class="content">
+                <p>- Nombre: Alianza Alfatres SA KAMADI CARRERA<br>
+                   - Rut: 76.103.973-3<br>
+                   - Banco: Banco Estado<br>
+                   - Tipo de cuenta: cuenta corriente<br>
+                   - Numero de cuenta: 53300501768<br>
+                   - Correo: carrera@kamadi.cl</p>
+                <button onclick="copyToClipboard('Alianza Alfatres SA KAMADI CARRERA\n76.103.973-3\nBanco Estado\nCuenta corriente 53300501768\ncarrera@kamadi.cl')">Copiar Información</button>
+            </div>
+        </section>
+        <section id="sanmartin">
+            <h2 onclick="toggleSection(this, 'sanmartin')">KAMADI San Martin</h2>
+            <div class="content">
+                <p>- Nombre: Alianza Alfatres SA KAMADI SAN MARTIN<br>
+                   - Rut: 76.103.973-3<br>
+                   - Banco: Banco Estado<br>
+                   - Tipo de cuenta: cuenta corriente<br>
+                   - Numero de cuenta: 53300492190<br>
+                   - Correo: sanmartin@kamadi.cl</p>
+                <button onclick="copyToClipboard('Alianza Alfatres SA KAMADI SAN MARTIN\n76.103.973-3\nBanco Estado\nCuenta corriente 53300492190\nsanmartin@kamadi.cl')">Copiar Información</button>
+            </div>
+        </section>
+        <section id="maipu">
+            <h2 onclick="toggleSection(this, 'maipu')">KAMADI Maipu</h2>
+            <div class="content">
+                <p>- Nombre: Alianza Alfatres SA KAMADI MAIPU<br>
+                   - Rut: 76.103.973-3<br>
+                   - Banco: Banco Estado<br>
+                   - Tipo de cuenta: cuenta corriente<br>
+                   - Numero de cuenta: 53300501750<br>
+                   - Correo: maipu@kamadi.cl</p>
+                <button onclick="copyToClipboard('Alianza Alfatres SA KAMADI MAIPU\n76.103.973-3\nBanco Estado\nCuenta corriente 53300501768\nmaipu@kamadi.cl')">Copiar Información</button>
+            </div>
+        </section>
+        <section id="sanpedro">
+            <h2 onclick="toggleSection(this, 'sanpedro')">KAMADI San Pedro</h2>
+            <div class="content">
+                <p>- Nombre: Alianza Alfatres SA KAMADI SAN PEDRO<br>
+                   - Rut: 76.103.973-3<br>
+                   - Banco: Banco Estado<br>
+                   - Tipo de cuenta: cuenta corriente<br>
+                   - Numero de cuenta: 53300501750<br>
+                   - Correo: sanpedro@kamadi.cl</p>
+                <button onclick="copyToClipboard('Alianza Alfatres SA KAMADI SAN PEDRO\n76.103.973-3\nBanco Estado\nCuenta corriente 53300501768\nsanpedro@kamadi.cl')">Copiar Información</button>
+            </div>
+        </section>
+        <div class="footer">
+            <a href="https://instagram.com/kamadi_cl" target="_blank">
+                <img src="instagram.png" alt="Instagram" class="instagram-icon">
+            </a>
+            <p class="website">www.kamadi.cl</p>
+        </div>
+    </main>
+</body>
+</html>
