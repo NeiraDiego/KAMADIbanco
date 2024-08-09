@@ -14,8 +14,8 @@ header {
 }
 
 .logo {
-    width: 150px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 main {
@@ -60,25 +60,40 @@ section .content button:hover {
     background: #009900;
 }
 
+.copyable {
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.copyable:hover {
+    text-decoration: underline;
+}
+
 .footer {
     text-align: center;
     margin-top: 2em;
 }
 
-.footer a {
-    color: #00cc00;
-    text-decoration: none;
+.footer .icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 1em;
 }
 
-.footer p {
+.footer .share {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.footer .share p {
+    font-weight: bold;
+    color: white;
+}
+
+.footer p.website {
     margin: 0.5em 0;
     color: #00cc00;
     font-weight: bold;
     font-size: 1.2em;
-}
-
-.instagram-icon {
-    width: 60px;
-    height: 60px;
-    margin-top: 1em;
 }
