@@ -31,6 +31,19 @@
                 const section = document.getElementById(hash);
                 if (section) {
                     section.querySelector('h2').click();
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Cta. Cte. KAMADI',
+                    text: 'Estos son los datos para transferencia de KAMADI',
+                    url: window.location.href
+        })
+        .then(() => console.log('Compartido exitosamente'))
+        .catch((error) => console.log('Error al compartir', error));
+    } else {
+        alert('La función de compartir no está soportada en este navegador.');
+    }
+}
                 }
             }
         }
@@ -98,7 +111,7 @@
             <a href="https://www.facebook.com/kamadi" target="_blank">
                 <img src="facebook.png" alt="Facebook" class="icon">
             </a>
-            <div class="share">
+            <div class="share" onclick="sharePage()">
                 <img src="share.png" alt="Compartir" class="icon">
                 <p>Compartir con un amigo</p>
             </div>
