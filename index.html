@@ -31,8 +31,16 @@
                 const section = document.getElementById(hash);
                 if (section) {
                     section.querySelector('h2').click();
-}
                 }
+            }
+        }
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Cta. Cte. KAMADI',
+                    text: 'Estos son los datos para transferencia de KAMADI',
+                    url: window.location.href
+                })
             }
         }
 
@@ -99,8 +107,13 @@
             <a href="https://www.facebook.com/kamadi" target="_blank">
                 <img src="facebook.png" alt="Facebook" class="icon">
             </a>
+            <div class="share" onclick="sharePage()">
+                <img src="share.png" alt="Compartir" class="icon">
+                <p>Compartir con un amigo</p>
+            </div>
             <p class="website"><a href="https://www.kamadi.cl" target="_blank">www.kamadi.cl</a></p>
         </div>
     </main>
 </body>
 </html>
+
